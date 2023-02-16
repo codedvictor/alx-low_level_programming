@@ -1,2 +1,2 @@
 #!/bin/bash
-cat main.c
+gcc $CFILE -0 c
