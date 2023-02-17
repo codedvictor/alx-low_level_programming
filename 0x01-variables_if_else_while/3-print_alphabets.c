@@ -13,15 +13,15 @@ int main(void)
 	char alpha;
 	char beta;
 
-		for (alpha = 'a'; alpha <= 'z'; alpha += 1)
+	for (alpha = 'a'; alpha <= 'z'; alpha += 1)
 	{
-	     putchar(alpha);
+		putchar(alpha);
 	};
-		for (beta = 'A'; beta <= 'Z'; beta += 1)
+	for (beta = 'A'; beta <= 'Z'; beta += 1)
 	{
-	     putchar(beta);
+		putchar(beta);
 	};
-	putchar('\n');
+		putchar('\n');
 
 	return (0);
 }
