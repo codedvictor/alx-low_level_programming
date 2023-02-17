@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <time.h>
 /* more headers goes there */
 #include <stdio.h>
 
@@ -10,19 +12,25 @@
 
 int main(void)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i < 100; i += 1)
+	for (j = '0'; j <= '9'; j += 1)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		if (i >= 0 && i != 99)
+		for (i = '0'; i <= '9'; i += 1)
 		{
-			putchar(',');
-			putchar(' ');
+			if (!((i == j) ||(j > i)))
+			{
+				putchar(j);
+				putchar(i);
+				if (!(i == '9' && j == '8'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
-		else
-			putchar('\n');
-	};
+	}
+	putchar('\n');
+
 	return (0);
 }
