@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 /* betty style doc for function main goes there */
-/*
- * function main - entry
+/**
+ * main - Entry point
  *
- * return (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
