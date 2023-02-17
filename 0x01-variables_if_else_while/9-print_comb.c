@@ -15,11 +15,11 @@ int main(void)
 	for (i = '0'; i <= '9'; i += 1)
 	{
 		putchar(i);
-	while (i<9)
-	{
-		putchar(',');
-		putchar(' ');
-	};
+		if (i != 8)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	};
 		putchar('\n');
 	return (0);
