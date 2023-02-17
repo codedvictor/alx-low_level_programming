@@ -7,14 +7,14 @@
  *
  * Return: Always 0 (Success)
  */
-int main (void)
+int main(void)
 {
 	char alpha;
 
-	for ( alpha = 'a'; alpha <= 'z'; alpha += 1)
+	for (alpha = 'a'; alpha <= 'z'; alpha += 1)
 	{
 		putchar(alpha);
 	};
 		putchar('\n');
-	return(0);
+	return (0);
 }
