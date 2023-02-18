@@ -14,9 +14,9 @@ int main(void)
 {
 	int i, j;
 
-	for (j = 0; j <= 100; j += 1)
+	for (j = 0; j < 100; j += 1)
 	{
-		for (i = 0; i <= 100; i += 1)
+		for (i = 0; i < 100; i += 1)
 		{
 			if  (j < i)
 			{
