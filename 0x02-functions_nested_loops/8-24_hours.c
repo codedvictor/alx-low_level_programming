@@ -6,7 +6,7 @@
 /**
  * jack_bauer - Entry point
  *
- * @n: is the print of the day of Jack Bauer
+ * @n: is the print of the day
  *
  * Return: 1 (Success) otherwise 0
  */
