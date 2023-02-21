@@ -23,14 +23,11 @@ void times_table(void)
 		{
 			int z = i * j;
 
-			if (z == 0)
+			if (j == 0)
 			{
 				_putchar (z + '0');
-				_putchar (',');
-				_putchar (' ');
-				_putchar (' ');
 			}
-			else if (z > 0 && z <= 9)
+			else if (j != 0 && z <= 9)
 			{
 			_putchar (',');
 			_putchar (' ');
