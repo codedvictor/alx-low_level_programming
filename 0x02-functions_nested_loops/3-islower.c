@@ -5,8 +5,9 @@
 /**
  * _islower -Entry point
  *
+ * Description: c paramater are to be checked to lowercase
+ *
  * Return: 1 (Success) otherwise 0
- * No description found for parameter or member 'c'
  */
 
 int _islower(int c)
