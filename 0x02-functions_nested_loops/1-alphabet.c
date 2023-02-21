@@ -10,16 +10,16 @@ void print_alphabet(void);
 
 int main(void)
 {
-    print_alphabet();
+    print_alphabet(void);
     return (0);
 }
 
 void print_alphabet(void){
-	
-	char i;
+
+	char _putcher(char i)
 	for ( i = 'a'; i <= 'z'; i += 1)
 	{
-	putchar(i);
+	_putchar(i);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
