@@ -4,9 +4,9 @@
 /* betty style doc for function main goes there */
 /**
  * _islower -Entry point
- * c - is the integer
- * Return: Always 0 (Success)
- * 
+ * int c - is the integer
+ * Return: 1 (Success)
+ * Return: 0 (failed)
  */
 
 int _islower(int c)
