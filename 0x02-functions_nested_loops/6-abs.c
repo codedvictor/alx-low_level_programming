@@ -11,7 +11,7 @@
  * Return: 1 (Success) otherwise 0
  */
 
-int _abs(int)
+int _abs(int n)
 {
 	if (int n >= 0)
 	{
