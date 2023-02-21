@@ -5,7 +5,7 @@
 /**
  * _islower -Entry point
  *
- * Description: c paramater are to be checked to lowercase
+ * @c: is the char to be checked for lowercase
  *
  * Return: 1 (Success) otherwise 0
  */
