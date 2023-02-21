@@ -22,9 +22,25 @@ void times_table(void)
 		for (j = 0; j <= 9; j += 1)
 		{
 			int z = i * j;
-			_putchar (z + '0');
+
+			if (z == 0)
+			{
+				_putchar (z + '0');
+			}
+			else if (z <= 9)
+			{
 			_putchar (',');
 			_putchar (' ');
+			_putchar (' ');
+			_putchar (z + '0');
+			}
+			else if (z > 9)
+			{
+			_putchar (',');
+			_putchar (' ');
+			_putchar ((k / 10) + '0');
+			_putchar ((k % 10) + '0');
+			}	
 		}
 		_putchar ('\n');
 	}
