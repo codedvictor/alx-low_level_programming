@@ -15,9 +15,11 @@ int main(void)
 }
 
 void print_alphabet(void){
-	char low;
+	
 	char i;
-	low = tolower(i);
-	putchar(low);
+	for ( i = a; i <= z; i += 1)
+	{
+	putchar(i);
+	}
 	putchar('\n');
 }
