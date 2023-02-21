@@ -6,6 +6,7 @@
  */
 
 void print_alphabet(void)
+	/*printing lowercase */
 {
 	int i;
 
