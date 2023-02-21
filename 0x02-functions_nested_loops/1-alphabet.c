@@ -10,16 +10,14 @@ void print_alphabet(void);
 
 int main(void)
 {
-    char alpha = print_alphabet();
-    putchar('alpha');
-    putchar('\n')
+    print_alphabet();
     return (0);
 }
 
 void print_alphabet(void){
 	char low;
 	char i;
-
 	low = tolower(i);
-	return low;
+	putchar(low);
+	putchar('\n');
 }
