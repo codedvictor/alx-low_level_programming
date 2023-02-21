@@ -1,9 +1,7 @@
 #include "main.h"
-
-/* betty style doc for function main goes there */
 /**
  * main - Entry point
- *
+ *main.h
  * Return: Always 0 (Success)
  */
 
