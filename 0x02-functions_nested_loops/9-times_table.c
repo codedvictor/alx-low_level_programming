@@ -24,6 +24,7 @@ void times_table(void)
 			int z = i * j;
 			_putchar (z + '0');
 			_putchar (',');
+			_putchar (' ');
 		}
 		_putchar ('\n');
 	}
