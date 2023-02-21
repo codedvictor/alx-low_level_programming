@@ -3,9 +3,10 @@
 
 /* betty style doc for function main goes there */
 /**
- * _islower(int c) -Entry point
- *
+ * _islower -Entry point
+ * c - is the integer
  * Return: Always 0 (Success)
+ * 
  */
 
 int _islower(int c)
