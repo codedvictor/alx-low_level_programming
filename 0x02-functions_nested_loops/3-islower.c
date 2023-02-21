@@ -3,7 +3,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * _islower -Entry point
+ * _islower(int c) -Entry point
  *
  * Return: Always 0 (Success)
  */
