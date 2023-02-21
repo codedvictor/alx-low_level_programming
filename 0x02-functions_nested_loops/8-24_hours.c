@@ -4,9 +4,9 @@
 
 /* betty style doc for function main goes there */
 /**
- * print_last_digit -Entry point
+ * jack_bauer - Entry point
  *
- * @n: is the last number to compute
+ * @n: is the print of the day of Jack Bauer
  *
  * Return: 1 (Success) otherwise 0
  */
@@ -14,9 +14,11 @@
 void jack_bauer(void)
 {
 	int i;
+
 	for (i = 0; i <= 23; i += 1)
 	{
 		int j;
+
 		for (j = 0; j < 60; j += 1)
 		{
 			_putchar (i / 10 + '0');
