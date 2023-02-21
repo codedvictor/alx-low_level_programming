@@ -4,14 +4,13 @@
 /* betty style doc for function main goes there */
 /**
  * _islower -Entry point
- * 
- * Return: 1 (Success) otherwise 0
  *
+ * Return: 1 (Success) otherwise 0
+ * No description found for parameter or member 'c'
  */
 
 int _islower(int c)
 {
-	/* c is the character to check */
 	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
