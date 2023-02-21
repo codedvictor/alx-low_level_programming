@@ -30,7 +30,7 @@ void times_table(void)
 				_putchar (' ');
 				_putchar (' ');
 			}
-			else if (z <= 9)
+			else if (z > 0 && z <= 9)
 			{
 			_putchar (',');
 			_putchar (' ');
