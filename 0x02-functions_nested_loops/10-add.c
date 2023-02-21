@@ -6,7 +6,8 @@
 /**
  * add - Entry point
  *
- * @i & @j: are the integers to be added
+ * @i: is one of the integers 
+ * @j: is the second
  *
  * Return: 1 (Success) otherwise 0
  */
