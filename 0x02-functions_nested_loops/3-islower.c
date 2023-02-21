@@ -4,8 +4,8 @@
 /* betty style doc for function main goes there */
 /**
  * _islower -Entry point
- * c - islower
- * Return: 1 (Success)
+ * @c: islower case character
+ * Return: 1 (Success) otherwise 0
  *
  */
 
