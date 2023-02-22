@@ -7,49 +7,38 @@
  * print_to_98 - Entry point
  *
  * @n: is the lowest integer
- *
+ * @i: one of the integer
+ * @j: the second one
  * Return: 1 (Success) otherwise 0
  */
 
 void print_to_98(int n)
 {
-	int i;
-
-	for (i = n; i <= 98; i += 1)
+	int i, j;
+	if (n <= 98)
 	{
-		if (i > (-112) && i <= (-100))
+		for (i = n; i <= 98; i += 1)
 		{
-			_putchar ('-');
-			_putchar ((i / 100) + '0');
-                        _putchar ((i / 10) + '0');
-                        _putchar ((i % 10) + '0');
+			if (i != 98)
+			{
+				printf("%d,", i);
+			}
+			else if (i == 98)
+			{
+				printf("%d\n", i);
+			}
 		}
-		else if(i <= (-10) && i > (-100))
-		{
-			_putchar ('-');
-			_putchar ((i / 10) + '0');
-			_putchar ((i % 10) + '0');
-		}
-			
-		else if (i < 10 && i > (-10))
-		{
-			_putchar (i + '0');
-			_putchar (',');
-			_putchar (' ');
-		}
-		else if (i >= 10 && i < 100) 
-		{
-			_putchar ((i / 10) + '0');
-			_putchar ((i % 10) + '0');
-		}
-		else if (i >= 100 && i < 112)
-		{
-			_putchar ((i / 100) + '0');
-			_putchar ((i / 10) + '0');
-			_putchar ((i % 10) + '0');
-		}
-		_putchar (',');
-                _putchar (' ');
 	}
-	_putchar ('\n');
+	else if (n >= 98)
+	{
+		for (j = n; j >= 98; j -= 1)
+		{
+			if (j != 98)
+			printf("%d,", j);
+		}
+		else if (j == 98)
+		{
+			printf("%d\n", j);
+		}
+	}
 }
