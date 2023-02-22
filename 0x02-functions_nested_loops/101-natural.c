@@ -13,17 +13,19 @@
 
 int main(void)
 {
-	int i, j, k;
+	int i, i3, i5, sum;
 
-	for (i = 0; i < 1024; i += 3)
+	for (i = 0; i < 1024; i += 1)
 	{
-		for (j = 0; j < 1024; j += 5)
+		i3 = i % 3;
+		i5 = i % 5;
+
+		if (i3 == 0) || (i5 == 0)
 		{
-			k = i * j;
+			sum = ij + ip;
 		}
-		k += k;
 
 	}
-	printf("%d\n", k);
+	printf("%d\n", sum);
 	return (0);
 }
