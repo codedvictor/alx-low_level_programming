@@ -1,7 +1,4 @@
 #include "main.h"
-
-/* more headers goes there */
-
 /* betty style doc for function main goes there */
 /**
  * print_times_table - Entry point
