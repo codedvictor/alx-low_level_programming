@@ -26,6 +26,7 @@ int main(void)
 		ip = ip + i;
 	}
 	sum = ip + ij;
+	sum = sum + i;
 	printf("%d\n", sum);
 	return (0);
 }
