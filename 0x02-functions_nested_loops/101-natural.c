@@ -24,7 +24,7 @@ int main(void)
 		{
 			sum = i3 + i5;
 		}
-		sum += sum;
+		sum += 1;
 	}
 	printf("%d\n", sum);
 	return (0);
