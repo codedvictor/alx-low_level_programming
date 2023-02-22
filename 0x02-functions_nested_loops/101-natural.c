@@ -22,10 +22,11 @@ int main(void)
 
 		if ((ij == 0) || (ip == 0))
 		{
-			ij = ij + i;
-			ip = ip + i;
+			ij += i;
+			ip += i;
 		}
 		sum = ij + ip;
+		sum = sum + i;
 	}
 	printf("%d\n", sum);
 	return (0);
