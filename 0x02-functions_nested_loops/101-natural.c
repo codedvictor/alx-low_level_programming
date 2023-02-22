@@ -4,29 +4,26 @@
 
 /* betty style doc for function main goes there */
 /**
- * print_last_digit -Entry point
+ * main -Entry point
  *
- * @n: is the last number to compute
  *
  * Return: 1 (Success) otherwise 0
  */
 
 int main(void)
 {
-	int i, ij, ip, sum;
+	int i, z = 0;
 
-	for (i = 0; i < 1024; i += 1)
+	while (i < 1024)
 	{
 		if ((i % 3 == 0) || (i % 5 == 0))
 		{
-			ij = i % 3;
-			ip = i % 5;
+			z += i;
 		}
-		ij = ij + i;
-		ip = ip + i;
+
+		i++;
 	}
-	sum = ip + ij;
-	sum = sum + i;
-	printf("%d\n", sum);
+
+	printf("%d\n", z);
 	return (0);
 }
