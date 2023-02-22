@@ -20,11 +20,10 @@ int main(void)
 		for (j = 0; j < 1024; j += 5)
 		{
 			k = i * j;
-			
-			k += k;
 		}
-		printf("%d\n", k);
+		k += k;
 
 	}
+	printf("%d\n", k);
 	return (0);
 }
