@@ -20,9 +20,9 @@ int main(void)
 		i3 = i % 3;
 		i5 = i % 5;
 
-		if (i3 == 0) || (i5 == 0)
+		if ((i3 == 0) || (i5 == 0))
 		{
-			sum = ij + ip;
+			sum = i3 + i5;
 		}
 
 	}
