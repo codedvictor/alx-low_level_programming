@@ -13,18 +13,18 @@
 
 int main(void)
 {
-	int i, i3, i5, sum;
+	int i, ij, ip, sum;
 
 	for (i = 0; i < 1024; i += 1)
 	{
-		i3 = i % 3;
-		i5 = i % 5;
+		ij = i % 3;
+		ip = i % 5;
 
-		if ((i3 == 0) || (i5 == 0))
+		if ((ij == 0) || (ip == 0))
 		{
-			sum = i3 + i5;
+			sum = ij + ip;
 		}
-		sum += 1;
+		sum += i;
 	}
 	printf("%d\n", sum);
 	return (0);
