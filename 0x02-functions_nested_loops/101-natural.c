@@ -26,4 +26,5 @@ int main(void)
 		printf("%d\n", k);
 
 	}
+	return (0);
 }
