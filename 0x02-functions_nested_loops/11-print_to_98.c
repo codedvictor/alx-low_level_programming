@@ -5,7 +5,7 @@
 /* betty style doc for function main goes there */
 /**
  * print_to_98 - Entry point
- * @n: is the lowest integer 
+ * @n: is the lowest integer
  * Return: 1 (Success) otherwise 0
  */
 
