@@ -15,23 +15,23 @@ void print_to_98(int n)
 {
 	int i;
 
-	for (i = n; i <= 111; i += 1)
+	for (i = n; i <= 98; i += 1)
 	{
-		if (n > (-112) && n <= (-100))
+		if (i > (-112) && i <= (-100))
 		{
 			_putchar ('-');
 			_putchar ((i / 100) + '0');
                         _putchar ((i / 10) + '0');
                         _putchar ((i % 10) + '0');
 		}
-		else if(n <= (-10) && n > (-100))
+		else if(i <= (-10) && i > (-100))
 		{
 			_putchar ('-');
 			_putchar ((i / 10) + '0');
 			_putchar ((i % 10) + '0');
 		}
 			
-		else if (n < 10 && n > (-10))
+		else if (i < 10 && i > (-10))
 		{
 			_putchar (i + '0');
 			_putchar (',');
