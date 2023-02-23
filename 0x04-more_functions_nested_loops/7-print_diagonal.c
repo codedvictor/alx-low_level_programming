@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_diagonal - draw lines
  * @n: no of dragonal
@@ -21,6 +22,6 @@ void print_diagonal(int n)
 			_putchar ('\');
 			}
 		_putchar ('\n');
-		continue;
+		break;
 	}
 }
