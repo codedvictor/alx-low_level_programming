@@ -3,13 +3,13 @@
 
 /**
  * _isupper - main entry
- * @a: is the character to check
+ * @c: is the number to check
  * Return: 1 success
  */
 
 int _isupper(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 90)
 	{
 		return (1);
 	}
