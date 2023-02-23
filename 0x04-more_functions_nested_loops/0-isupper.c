@@ -1,10 +1,10 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _isupper - main entry
- * 
  * @a: is the character to check
- * Return: largest number
+ * Return: 1 success
  */
 
 int _isupper(int c)
