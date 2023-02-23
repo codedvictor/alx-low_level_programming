@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * mul - returns the product of its parameters
+ * print_numbers - prints the numbers
  * @a: printed number
  * Return:0
  */
 
 void print_numbers(void)
 {
-	int a;
+	int c;
 
-	for (a = 0; a <= 9; a += 1)
+	for (c = 0; c <= 9; c += 1)
 	{
-		_putchar (a);
+		_putchar (c);
 	}
 	_putchar('\n');
 }
