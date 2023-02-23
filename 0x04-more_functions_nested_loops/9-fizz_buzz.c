@@ -1,11 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
+
 /**
- * main - entry point
- *
- * Return:0 success
- */
+  * main - Prints a Fizz Buzz program
+  *
+  * Return: Always 0 (Success)
+  */
 
 int main(void)
 {
@@ -14,9 +15,9 @@ int main(void)
 	for (i = 1; i <= 100; i += 1)
 	{
 		if ((i % 3 == 0) && (i % 5 == 0))
-                {
-                        printf("FizzBuzz");
-                }
+		{
+			printf("FizzBuzz");
+		}
 		else if (i % 3 == 0)
 		{
 			printf("Fizz");
