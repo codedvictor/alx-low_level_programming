@@ -1,9 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_square - draw square
- * @size: no of square
- * Return:0
+ * main - entry point
+ * Return:0 success
  */
 
 int main(void)
