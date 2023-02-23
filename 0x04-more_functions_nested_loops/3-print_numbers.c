@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * print_numbers - prints the numbers
- * @a: printed number
  * Return:0
  */
 
