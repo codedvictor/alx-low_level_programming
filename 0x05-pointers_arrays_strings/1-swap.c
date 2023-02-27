@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * swap-int - exchange the code
- * @a & @b: change the value
+ * swap_int - exchange the code
+ * @a,@b: change the value
  * Return: Always 0.
  */
 
