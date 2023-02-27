@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code 
- *
+ * reset_to_98 - reset the code
+ * @n: change the value
  * Return: Always 0.
  */
 
