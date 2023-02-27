@@ -3,7 +3,8 @@
 
 /**
  * swap_int - exchange the code
- * @a,@b: change the value
+ * @a: number to change
+ * @b: change the value
  * Return: Always 0.
  */
 
