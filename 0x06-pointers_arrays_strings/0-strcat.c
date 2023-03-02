@@ -4,8 +4,8 @@
 
 char *_strcat(char *dest, char *src)
 {
-	src[_strlen(dest)];
-	_strcat (dest, src);
+	src[strlen(dest)];
+	strcat (dest, src);
 
 	return dest;
 }
