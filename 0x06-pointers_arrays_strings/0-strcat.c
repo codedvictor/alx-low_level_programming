@@ -13,8 +13,7 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int nVar = 0;
-	int x;
+	int nVar = 0, x;
 
 	while (dest[nVar])
 	{
@@ -28,6 +27,5 @@ char *_strcat(char *dest, char *src)
 	}
 
 	dest[nVar] = '\0';
-
-	return dest;
+	return (dest);
 }
