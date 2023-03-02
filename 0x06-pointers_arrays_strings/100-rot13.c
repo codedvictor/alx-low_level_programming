@@ -1,11 +1,11 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
-  * rot13 - ...
-  * @s: ...
+  * rot13 - entry point
+  * @s: pointer to address
   *
-  * Return: ...
+  * Return: success
   */
 
 char *rot13(char *s)
