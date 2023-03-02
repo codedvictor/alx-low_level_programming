@@ -9,23 +9,27 @@
   */
 int _strcmp(char *s1, char *s2)
 {
-	int x, y, z, j, lim;
+	int x = 0, y = 0, z = 0, j = 0, k;
 
-	for (x = 0; s1[x]; x++)
+	while (s1[x])
 	{
-		for (y = 0; s2[y]; y++)
-		{
-			if (x <= y)
-			{
-				lim = x;
-			}
-			else
-			{
-				lim = y;
-			}
-		}
+		x++;
 	}
-	while (z <= lim)
+
+	while (s2[y])
+	{
+		y++;
+	}
+
+		if (x <= y)
+		{
+			k = x;
+		}
+		else
+		{
+			k = y;
+		}
+	while (z <= k)
 	{
 		if (s1[z] == s2[z])
 		{
