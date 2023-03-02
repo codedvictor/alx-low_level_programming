@@ -7,6 +7,7 @@
   *
   * Return: int value
   */
+
 int _strcmp(char *s1, char *s2)
 {
 	int x = 0, y = 0, z = 0, j = 0, k;
@@ -15,12 +16,10 @@ int _strcmp(char *s1, char *s2)
 	{
 		x++;
 	}
-
 	while (s2[y])
 	{
 		y++;
 	}
-
 		if (x <= y)
 		{
 			k = x;
@@ -41,9 +40,7 @@ int _strcmp(char *s1, char *s2)
 			j = s1[z] - s2[z];
 			break;
 		}
-
 		z++;
 	}
-	
 	return (j);
 }
