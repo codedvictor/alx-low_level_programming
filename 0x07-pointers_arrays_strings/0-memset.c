@@ -1,23 +1,18 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _memset - fills memory
- * @s: the address to print
- * @b: the size of the memory to print
- * @n: the varible
- * Return: value of s
+ * _memset - Entry point
+ * @s: pointed destination
+ * @b: constant byte
+ * @n: bytes
+ * Return: Always 0 (Success)
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int x;
-	x = 0;
 
-	while (x < n)
-	{
+	for (x = 0; x < n; x++)
 		s[x] = b;
-		x++;
-	}
-	return (s);	
+
+	return (s);
 }
