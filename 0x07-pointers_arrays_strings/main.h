@@ -29,4 +29,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
 
 char *_memset(char *s, char b, unsigned int n);
+void set_string(char **s, char *to);
+
 #endif /* MAIN_H */
