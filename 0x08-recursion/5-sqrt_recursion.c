@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <math.h>
 /**
  * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
  * @n: input
