@@ -30,6 +30,6 @@ int _sqrt(int n, int i)
 
 	else if (sq == n)
 		return (i);
-	else if (sq < n)
+	else
 		return (_sqrt(n, i + 2));
 }
