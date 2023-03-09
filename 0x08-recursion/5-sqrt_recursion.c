@@ -31,5 +31,5 @@ int _sqrt(int n, int i)
 	else if (sq == n)
 		return (i);
 	else
-		return (_sqrt(n, i + 2));
+		return (_sqrt(n, i + 1));
 }
