@@ -8,7 +8,13 @@
  */
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	printf("%d\n", argc);
+	int i = 0;
+
+	while (i < argc)
+	{
+		i++;
+	}
+	printf("%d\n", i - 1);
 
 	return (0);
 }
