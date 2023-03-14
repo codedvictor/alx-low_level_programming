@@ -23,5 +23,5 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
 char *create_array(unsigned int size, char c);
-
+char *_strdup(char *str);
 #endif /* MAIN_H */
