@@ -1,14 +1,15 @@
+#include <udis86.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <udis86.h>
 
 /**
-  * main - ...
-  * @argc: ...
-  * @argv: ...
+  * main - entry point
+  * @argc: constant
+  * @argv: arrays
   *
-  * Return: ...
+  * Return: 0 sucess
   */
+
 int main(int argc, char *argv[])
 {
 	ud_t ud_obj;
