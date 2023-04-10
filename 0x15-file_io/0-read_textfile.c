@@ -17,9 +17,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *texts;
 	int count, words;
 
-	texts = malloc(sizeof(char *) * letters);
+	texts = malloc(letters * sizeof(char *));
 
 		if (filename == NULL || texts == NULL)
+			return (0);
+		if (letters == 0)
 			return (0);
 
 		words = open(filename, O_RDONLY);
