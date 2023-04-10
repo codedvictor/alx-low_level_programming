@@ -1,45 +1,43 @@
-#include <fcntl.h>
 #include <unistd.h>
+#include <fcntl.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
- * read_textfile - reads a text file and prints
+ * read_textfile - prints text from a file
  *
- * @filename: the file name
- * @letters: the letters in the file
+ * @filename: name of the file
+ * @letters: number of characters to read
  *
- * Return: 0 success
+ * Return: actual number of letters read, 0 if end of file
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *texts;
-	int count, words;
+	int oFile, nLen;
+	char *ncount;
 
-	texts = malloc(letters * sizeof(char *));
+	if (filename == NULL || letters == 0)
+		return (0);
+	ncount = malloc(sizeof(char) * (letters));
+	if (ncount == NULL)
+		return (0);
 
-		if (filename == NULL || texts == NULL || letters == 0)
-			return (0);
+	oFile = open(filename, O_RDONLY);
+	if (oFile == -1)
+	{
+		free(ncount);
+		return (0);
+	}
+	nLen = read(oFile, ncount, letters);
+	if (nLen == -1)
+	{
+		free(ncount);
+		close(oFile);
+		return (0);
+	}
 
-		words = open(filename, O_RDONLY);
-		if (words == -1)
-		{
-			free(texts);
-			return (0);
-		}
+	write(1, ncount, nLen);
 
-		count = read(words, texts, letters);
-		if (count == -1)
-		{
-			free(texts);
-			close(words);
-			return (0);
-		}
-		write(1, texts, count);
-
-	free(texts);
-	close(words);
-
-	return (count);
+	free(ncount);
+	close(oFile);
+	return (nLen);
 }
