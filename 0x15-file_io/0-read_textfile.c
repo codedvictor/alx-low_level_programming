@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (filename == NULL || texts == NULL)
 			return (0);
 
-		words = open(filename, O_RDONLY);
+		words = open(filename, O_RDONLY, 0600);
 		if (words == -1)
 			return (0);
 
