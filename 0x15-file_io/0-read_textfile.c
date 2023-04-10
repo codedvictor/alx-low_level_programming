@@ -19,9 +19,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	texts = malloc(letters * sizeof(char *));
 
-	words = open(filename, O_RDONLY);
+		if (filename == NULL || texts == NULL)
+			return (0);
 
-		if (filename == NULL || texts == NULL || words == -1)
+		words = open(filename, O_RDONLY);
+		if (words == -1)
 			return (0);
 
 		count = read(words, texts, letters);
