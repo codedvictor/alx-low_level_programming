@@ -13,7 +13,7 @@ int get_endianness(void)
 	int e = 1;
 	int end;
 
-	end = (*((char *) &e) + '0'); 
+	end = (*((char *) &e) + '0');
 
 	return (end);
 }
