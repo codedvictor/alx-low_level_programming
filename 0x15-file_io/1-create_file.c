@@ -24,12 +24,9 @@ int create_file(const char *filename, char *text_content)
 
 	if (!(text_content == NULL))
 	{
-		buff = text_content;
-		while (*buff)
-		{
+		for (len = 0, buff = text_content; *buff; buff++)
 			len++;
-			buff++;
-		}
+
 		nfile = write(ofile, text_content, len);
 	}
 	if (!(len == nfile))
