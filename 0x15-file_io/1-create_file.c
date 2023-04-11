@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int ofile, len = 0, nfile = 0;
 	char *buff;
-	
+
 	if (filename == NULL)
 		return (-1);
 
@@ -39,5 +39,4 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	return (1);
-
 }
