@@ -17,11 +17,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	flip = n ^ m;
 
-	while(flip != 0)
+	while (flip != 0)
 	{
 		if (flip & 1ul)
 			buff++;
-		flip = flip >> 2;
+		flip = flip >> 1;
 	}
 
 	return (buff);
