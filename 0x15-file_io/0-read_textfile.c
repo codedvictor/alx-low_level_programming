@@ -12,37 +12,35 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int oFile, nLen, nFile;
-	char *ncount;
+	int file;
+	int length, wrotechars;
+	char *buf;
 
 	if (filename == NULL || letters == 0)
 		return (0);
-	ncount = malloc(sizeof(char) * (letters));
-	if (ncount == NULL)
+	buf = malloc(sizeof(char) * (letters));
+	if (buf == NULL)
 		return (0);
 
-	oFile = open(filename, O_RDONLY);
-	if (oFile == -1)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 	{
-		free(ncount);
+		free(buf);
 		return (0);
 	}
-	nLen = read(oFile, ncount, letters);
-	if (nLen == -1)
+	length = read(file, buf, letters);
+	if (length == -1)
 	{
-		free(ncount);
-		close(oFile);
+		free(buf);
+		close(file);
 		return (0);
 	}
 
-	nFile = write(1, ncount, nLen);
-	if (nFile == -1 || nFile != nLen)
-		{
-			free(ncount);
-			close(oFile);
-			return (0);
-		}
-	free(ncount);
-	close(oFile);
-	return (nLen);
+	wrotechars = write(STDOUT_FILENO, buf, length);
+
+	free(buf);
+	close(file);
+	if (wrotechars != length)
+		return (0);
+	return (length);
 }
