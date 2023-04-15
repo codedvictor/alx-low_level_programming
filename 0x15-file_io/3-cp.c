@@ -6,8 +6,8 @@
 void transfer_file(const char *source, const char *destination);
 /**
  * main - file copying
- * @argc: command line argument count
- * @argv: command line arguments
+ * @arg_c: command line argument count
+ * @arg_v: command line arguments
  *
  * Return: 0 on success
  */
@@ -45,11 +45,12 @@ void transfer_file(const char *source, const char *destination)
 		exit(98);
 	}
 
-	file_to = open(destination, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	file_to = open(destination, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	while ((rev = read(file_from, buff, 1024)) > 0)
 	{
-		if (file_to == -1 || (wrt = write(file_to, buff, rev)!= rev))
+		wrt = write(file_to, buff, rev);
+		if (file_to == -1 || (wrt != rev))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destination);
 			exit(99);
