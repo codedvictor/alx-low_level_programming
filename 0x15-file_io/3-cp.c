@@ -44,13 +44,12 @@ void transfer_file(const char *source, const char *destination)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
 		exit(98);
 	}
-	rev = read(file_from, buff, 1024);
 
-	file_to = open(destination, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	wrt = write(file_to, buff, rev);
-	while (rev > 0)
+	file_to = open(destination, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+
+	while ((rev = read(file_from, buff, 1024)) > 0)
 	{
-		if (file_to == -1 || wrt != rev)
+		if (file_to == -1 || (wrt = write(file_to, buff, rev)!= rev))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", destination);
 			exit(99);
