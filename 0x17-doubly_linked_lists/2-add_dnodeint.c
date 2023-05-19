@@ -13,39 +13,16 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *temp;
 
-	if (head != NULL)
-	{
-		temp = malloc(sizeof(dlistint_t));
-		if (temp == NULL)
-			return (NULL);
+	temp = malloc(sizeof(dlistint_t));
+	if (temp == NULL)
+		return (NULL);
 
-		temp->n = n;
-		temp->prev = NULL;
-		temp->next = *head;
+	temp->n = n;
+	temp->prev = NULL;
+	temp->next = *head;
+	if (*head != NULL)
+		(*head)->prev = temp;
+	*head = temp;
 
-		*head = temp;
-
-		return (temp);
-	}
-
-	return (0);
-}
-
-/**
-  * _strlen - Returns the length of a string
-  * @s: String to count
-  *
-  * Return: String length
-  */
-int _strlen(const char *s)
-{
-	int c = 0;
-
-	while (*s)
-	{
-		s++;
-		c++;
-	}
-
-	return (c);
+	return (temp);
 }
