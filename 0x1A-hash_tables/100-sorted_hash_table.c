@@ -39,36 +39,33 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 /**
  * insert_to_sorted_list - compare abcs and insert node into list (for printing)
- * 
  * @ht: sorted hash table
  * @node: node to insert
- * 
  * Return: 1 if success, 0 if fail
  */
 int insert_to_sorted_list(shash_table_t *ht, shash_node_t *node)
 {
 	shash_node_t *temp;
 
-	/* if empty hash table, initialize head and tail nodes */
 	if (!(ht->shead))
 	{
 		ht->shead = node;
 		ht->stail = node;
 		return (1);
 	}
-	if (strcmp(node->key, (ht->shead)->key) <= 0) /* insert at beginning */
+	if (strcmp(node->key, (ht->shead)->key) <= 0)
 	{
 		node->snext = ht->shead;
 		(ht->shead)->sprev = node;
 		ht->shead = node;
 	}
-	else if (strcmp(node->key, (ht->stail)->key) > 0) /* insert at end */
+	else if (strcmp(node->key, (ht->stail)->key) > 0)
 	{
 		node->sprev = ht->stail;
 		(ht->stail)->snext = node;
 		ht->stail = node;
 	}
-	else /* insert in middle */
+	else
 	{
 		temp = ht->shead;
 		while (temp->snext && strcmp(node->key, (temp->snext)->key) > 0)
@@ -83,12 +80,10 @@ int insert_to_sorted_list(shash_table_t *ht, shash_node_t *node)
 
 /**
  * create_and_add_node - malloc, set values, and insert node into hash table
- * 
  * @ht: sorted hash table
  * @key: key; can't be empty string
  * @value: value
  * @idx: index to insert in at hash table
- * 
  * Return: 1 if success, 0 if fail
  */
 int create_and_add_node(shash_table_t *ht, const char *key, const char *value,
@@ -134,20 +129,13 @@ int create_and_add_node(shash_table_t *ht, const char *key, const char *value,
 
 /**
  * shash_table_set - add element to sorted hash table
- *
  * @ht: hash table
  * @key: key; can't be empty string
  * @value: value
- * 
  * Return: 1 if success, 0 if fail
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-	/* get index */
-	/* if key already exists, update value and return */
-	/* else create node */
-	/* set ht idx ptr to node; else put in sorted linked list if collision*/
-
 	unsigned long int id;
 	shash_node_t *nod = NULL;
 	char *x;
@@ -157,7 +145,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	id = key_index((const unsigned char *)key, ht->size);
 
-	nod = (ht->array)[idx];
+	nod = (ht->array)[id];
 	while (nod && (strcmp(key, nod->key) != 0))
 		nod = nod->next;
 	if (nod != NULL)
@@ -176,19 +164,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 /**
  * shash_table_get - given key, get value
- *
  * @ht: hash table
  * @key: key
- * 
  * Return: value; or NULL if not found
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	unsigned long int id;
 	shash_node_t *temp;
-
-	/* find index in hash table where key is */
-	/* look through linked list to find matching key for value */
 
 	if (!ht || !key)
 		return (NULL);
@@ -228,7 +211,6 @@ void shash_table_print(const shash_table_t *ht)
 
 /**
  * shash_table_print_rev - print key/values of sorted hashtable in reverse order
- * 
  * @ht: hash table
  */
 void shash_table_print_rev(const shash_table_t *ht)
@@ -252,7 +234,6 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 /**
  * shash_table_delete - free and delete sorted hash table
- * 
  * @ht: hash table
  */
 void shash_table_delete(shash_table_t *ht)
