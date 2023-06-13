@@ -1,10 +1,8 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - free and delete hash table
- * 
+ * hash_table_delete - free & delete hash table
  * @ht: hash table
- *
  */
 void hash_table_delete(hash_table_t *ht)
 {
@@ -33,7 +31,7 @@ void hash_table_delete(hash_table_t *ht)
 			nod->key = NULL;
 			nod->value = NULL;
 			free(nod);
-			nod = next;
+			nod = nxt;
 		}
 		id++;
 	}
