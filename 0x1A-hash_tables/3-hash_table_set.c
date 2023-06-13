@@ -25,7 +25,7 @@ int create_and_add_node(hash_table_t *ht, const char *key, const char *value,
 	x = strdup(key);
 	if (!x)
 	{
-		free(node);
+		free(nod);
 		return (0);
 	}
 
@@ -74,7 +74,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	id = key_index((const unsigned char *)key, ht->size);
 
-	nod = (ht->array)[idx];
+	nod = (ht->array)[id];
 	while (nod && (strcmp(key, nod->key) != 0))
 		nod = nod->next;
 	if (nod != NULL)
@@ -83,10 +83,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (!y)
 			return (0);
 		if (nod->value)
-			free(node->value);
+			free(nod->value);
 		nod->value = y;
 		return (1);
 	}
 
-	return (create_and_add_node(ht, key, value, idx));
+	return (create_and_add_node(ht, key, value, id));
 }
