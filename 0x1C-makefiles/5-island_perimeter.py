@@ -18,7 +18,7 @@ def island_perimeter(grid):
     for x in range(row):
         for y in range(col):
 
-            if grid[x][y] == 1:  
+            if grid[x][y] == 1:
 
                 """Top checker"""
                 if x-1 == -1 or grid[x-1][y] == 0:
