@@ -11,13 +11,12 @@ def island_perimeter(grid):
     One cell is a square with side length 1
     """
 
-    
     row = len(grid)
     col = len(grid[0])
     perimeter = 0
 
-    for x in range(1, row):
-        for y in range(1, col):
+    for x in range(row):
+        for y in range(col):
 
             if grid[x][y] == 1:
 
@@ -30,10 +29,10 @@ def island_perimeter(grid):
                     perimeter += 1
 
                 """Right checker"""
-                if x == row or grid[x+1][y] == 0:
+                if x+1 == row or grid[x+1][y] == 0:
                     perimeter += 1
 
                 """Bottom checker"""
-                if y == col or grid[x][y+1] == 0:
+                if y+1 == col or grid[x][y+1] == 0:
                     perimeter += 1
     return (perimeter)
