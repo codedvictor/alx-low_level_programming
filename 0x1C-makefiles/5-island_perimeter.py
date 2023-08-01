@@ -11,12 +11,13 @@ def island_perimeter(grid):
     One cell is a square with side length 1
     """
 
+    
     row = len(grid)
     col = len(grid[0])
     perimeter = 0
 
-    for x in range(row):
-        for y in range(col):
+    for x in range(1, row):
+        for y in range(1, col):
 
             if grid[x][y] == 1:
 
