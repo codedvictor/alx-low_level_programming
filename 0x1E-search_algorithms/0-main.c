@@ -16,6 +16,6 @@ int main(void)
 
     printf("Found %d at index: %d\n\n", 3, linear_search(array, size, 3));
     printf("Found %d at index: %d\n\n", 42, linear_search(array, size, 42));
-    printf("Found %d at index: %d\n", 999, linear_search(array, size, 999));
+    printf("Found %d at index: %d\n", 999, linear_search(array, size, 9));
     return (EXIT_SUCCESS);
 }

@@ -5,9 +5,9 @@
 /**
  * linear_search - a function that searches for a value in an array of integers
  *
- * @array:
- * @size:
- * @value:
+ * @array: a pointer to the first element of the array to search
+ * @size: the number of elements in array
+ * @value: the value to search
  *
  * return: integer value
  */
